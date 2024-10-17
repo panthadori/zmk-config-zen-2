@@ -30,15 +30,15 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  1F |  2F |  3F |  4F |  5F |   |  6F |  7F |  8F |  9F |  0F10  |
-// | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |   F11  |
-// |     |     |     |     |     |   |     | LFT | DWN |  RGT|   F12  |
-//           | BTCLR |  ALT| SPC |   | ENT |     | ALT |
+// |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | 
+// | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |     | 
+// |     |     |     |     |     |   |     | LFT | DWN | RGT |     | 
+//           | BTCLR |     |     |   |     |     |     |
                         bindings = <
- &mt N1 F1    &mt N2 F2    &mt N3 F3    &mt N4 F4    &mt N5 F5      &mt N6 F6  &mt N7 F7  &mt N8 F8 &mt N9 F9 &mt N0 F10 
- &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans     &trans     &kp UP    &trans    &kp F11
- &trans       &trans       &trans       &trans       &trans         &trans     &kp LEFT   &kp DOWN  &kp RIGHT &kp F12
-                           &kp BT_CLR   &kp RALT     &kp SPACE      &kp RET    &trans     &trans
+   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans   &kp UP &trans    &trans 
+   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans 
+                             &kp BT_CLR       &trans       &trans         &trans  &trans    &trans
                         >;
                 };
 
