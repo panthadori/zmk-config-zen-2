@@ -4,8 +4,8 @@
 
 / {
   chosen {
-    //zmk,matrix_transform = &default_transform;
-    zmk,matrix_transform = &five_column_transform;
+    zmk,matrix_transform = &default_transform;
+    //zmk,matrix_transform = &five_column_transform;
   };
 };
 
@@ -28,32 +28,32 @@
                         >;
                 };
                 lower_layer {
-                        label = "BTNUM";
+                        label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  1F |  2F |  3F |  4F |  5F |   |  6F |  7F |  8F |  9F |  0F10  |
-// | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |   F11  |
-// |     |     |     |     |     |   |     | LFT | DWN |  RGT|   F12  |
-//           | BTCLR |  ALT| SPC |   | ENT |     | ALT |
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &mt N1 F1    &mt N2 F2    &mt N3 F3    &mt N4 F4    &mt N5 F5      &mt N6 F6  &mt N7 F7  &mt N8 F8 &mt N9 F9 &mt N0 F10 
- &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans     &trans     &kp UP    &trans    &kp F11
- &trans       &trans       &trans       &trans       &trans         &trans     &kp LEFT   &kp DOWN  &kp RIGHT &kp F12
-                           &kp BT_CLR   &kp RALT     &kp SPACE      &kp RET    &trans     &trans
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
 
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  !~ |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  -  |  _= |
-// |  `  |     |     |     |  (  |   |     |  =  |  [  |  ]  |  \  |
-// |     |     |     |     |  )  |   |     |  +  |  {  |  }  | "|" |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-  &mt EXCL TILDE &kp AT   &kp HASH  &kp DLLR   &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp MINUS &mt UNDER EQUAL
-  &kp GRAVE      &trans   &trans    &trans     &kp LPAR    &trans    &kp EQUAL &kp LBKT        &kp RBKT  &kp BSLH
-  &trans         &trans   &trans    &trans     &kp RPAR    &trans    &kp PLUS  &kp LBRC        &kp RBRC  &kp PIPE
-                 &trans   &trans    &kp SPACE  &kp RET     &trans    &trans
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
         };
